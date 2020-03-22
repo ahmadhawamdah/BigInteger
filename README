@@ -1,0 +1,143 @@
+Ahmad Hawamdah
+ahawamda
+11/15/2019
+CSE 101
+PA3
+
+In this program, a calculator is created for performing BigInteger arithmetic operations on arbitrarily large signed integers. Including sum, difference, product, copy, and scalar multiplication.
+
+Matrix functions:
+ newBigInteger()
+ Returns a reference to a new BigInteger object in the zero state.
+BigInteger newBigInteger();
+ freeBigInteger()
+ Frees heap memory associated with *pN, sets *pN to NULL.
+void freeBigInteger();
+
+ Access functions:
+ sign()
+ Returns -1 if N is negative, 1 if N is positive, and 0 if N is in the zero
+ state.
+
+ compare()
+ Returns -1 if A<B, 1 if A>B, and 0 if A=B.
+
+ equals()
+ Return true (1) if A and B are equal, false (0) otherwise.
+
+ Manipulation procedures:
+ makeZero()
+ Re-sets N to the zero state.
+
+ negate()
+ Reverses the sign of N: positive <--> negative. Does nothing if N is in the
+ zero state.
+
+ BigInteger Arithmetic operations:
+ stringToBigInteger()
+ Returns a reference to a new BigInteger object representing the decimal integer
+ represented in base 10 by the string s.
+ Pre: s is a non-empty string containing only base ten digits {0,1,2,3,4,5,6,7,8,9}
+ and an optional sign {+, -} prefix.
+
+ copy()
+ Returns a reference to a new BigInteger object in the same state as N.
+
+ add()
+ Places the sum of A and B in the existing BigInteger S, overwriting its
+ current state: S = A + B
+
+ sum()
+ Returns a reference to a new BigInteger object representing A + B.
+
+ subtract()
+ Places the difference of A and B in the existing BigInteger D, overwriting
+ its current state: D = A - B
+
+ diff()
+ Returns a reference to a new BigInteger object representing A - B.
+
+ multiply()
+ Places the product of A and B in the existing BigInteger P, overwriting
+ its current state: P = A*B
+
+ prod()
+ Returns a reference to a new BigInteger object representing A*B
+
+ Other operations:
+ printBigInteger()
+ Prints a base 10 string representation of N to filestream out.
+
+List functions:
+newList()
+Creates and returns a new empty List.
+
+freeList();
+Frees all heap memory associated with *pL, and sets *pL to NULL.
+
+Access functions:
+length()
+Returns the number of elements in L.
+
+index()
+Returns index of cursor element if defined, -1 otherwise.
+
+front()
+Returns front element of L. Pre: length()>0
+
+back()
+Returns back element of L. Pre: length()>0
+
+get()
+Returns cursor element of L. Pre: length()>0, index()>=0
+
+isEmpty()
+checks if a list is empty
+
+getData()
+Returns true (1) iff Lists A and B are in same
+state, and returns false (0) otherwise.
+
+Manipulation procedures:
+clear()
+Resets L to its original empty state.
+
+moveFront()
+If L is non-empty, sets cursor under the front element, otherwise does nothing.
+
+moveBack()
+If L is non-empty, sets cursor under the back element, otherwise does nothing.
+
+movePrev()
+If cursor is defined and not at front, move cursor one step toward the front of L; if cursor is defined and at front, cursor becomes undefined; if cursor is undefined do nothing
+
+moveNext()
+If cursor is defined and not at back, move cursor one step toward the back of L; if cursor is defined and at back, cursor becomes undefined; if cursor is undefined do nothing
+
+prepend()
+Insert new element into L. If L is non-empty, insertion takes place before front element.
+
+append()
+Insert new element into L. If L is non-empty, insertion takes place after back element.
+
+insertBefore()
+Insert new element before cursor. Pre: length()>0, index()>=0
+
+insertAfter()
+Insert new element after cursor. Pre: length()>0, index()>=0
+
+void deleteFront()
+Delete the front element. Pre: length()>0
+
+void deleteBack()
+Delete the back element. Pre: length()>0
+
+void delete()
+Delete cursor element, making cursor undefined. Pre: length()>0, index()>=0
+
+copyList()
+Returns a new List representing the same integer sequence as L. The cursor in the new list is undefined,
+regardless of the state of the cursor in L. The state of L is unchanged.
+
+
+
